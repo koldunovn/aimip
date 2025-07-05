@@ -159,12 +159,12 @@ if __name__ == "__main__":
 
     # --- Configuration for Metadata Overrides ---
     METADATA_OVERRIDES = {
-        'institution_id': 'AWI',
-        'institution': 'Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research, Bremerhaven, Germany',
-        'source_id': 'AWI-CM-1-1-MR',
+        # 'institution_id': 'AWI',
+        # 'institution': 'Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research, Bremerhaven, Germany',
+        # 'source_id': 'AWI-CM-1-1-MR',
         'grid_label': 'gr',
         'grid': 'gr',
-        'contact': 'info@awi.de'
+        # 'contact': 'info@awi.de'
     }
 
     with xr.open_dataset(args.template_file, decode_times=False) as template_ds:
@@ -172,7 +172,7 @@ if __name__ == "__main__":
         regridded_data = generate_example_regridded_data(template_ds)
 
         # 2. Define the output file path
-        output_filename = os.path.basename(args.template_file).replace('.nc', '_cmorized.nc')
+        output_filename = os.path.basename(args.template_file).replace('_gn_', '_gr_')
         output_path = os.path.join(os.path.dirname(args.template_file), output_filename)
 
         # 3. Create the CMOR file
