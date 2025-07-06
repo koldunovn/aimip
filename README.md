@@ -1,4 +1,5 @@
-AIMIP data preparation.
+AIMIP data preparation
+==
 
 The easiest way to start converting your data into CMORized files is to download the example files we’ve prepared and use them as templates for your own data.
 
@@ -36,13 +37,15 @@ fs.get('ai-mip/', './AMPI-local/', recursive=True)
 
 More examples in `data_read` directory.
 
+**NOTE!** Before the core AIMIP-1 paper is published, the authors of any paper, arxiv or conference preprint based on AIMIP-1 outputs must offer coauthorship to all the AIMIP-1 contributing modeling groups before that paper/arxiv/preprint is submitted.
+
 Example files
-====
+===
 We have prepared example files for all variables listed in the [AMIP proposal](https://docs.google.com/document/d/1-NqmXTrEGolzzUdQdMQER43sluNvqeJIiRZeYjE2jKY/edit?tab=t.0#heading=h.agwogvnn8ud) (currently only `Amon` frequency) using `MPI-ESM1-2-LR` model AMIP simulations. These files are located at `/ai-mip/MPI-M/MPI-ESM1-2-LR/` as shown above. Versions are available both on the native grid (`gn`) and interpolated to a 1° regular grid (`gr`).
 
 Uploading Your Data
-====
-We expect the data to be CMORized (i.e., converted to the standard CMIP6 format). If you have experience with CMORization and can provide fully CMOR-compliant files, great! However, to simplify the process, we provide example files to use as templates. The closer your data are to the example format, the more likely your model will be included in every analysis.
+===
+We expect the data to be CMORized (i.e., converted to the standard CMIP6 format). If you have experience with CMORization and can provide fully CMOR-compliant files, great! However, to simplify the process, we provide example files to use as templates. The closer your data are to the example format, the more likely your model will be included in every analysis. If you plan to publish your data on ESGF later, full CMOR compliance is the only option 🤷.
 
 There are some [minimum requirements for ESMValTool compatibility](https://gist.github.com/schlunma/fb7fb96f8a41c476bb1e1d99be321097#absolutely-mandatory-criteria), but in general: the closer your data are to true CMOR compliance, the better 😊.
 
@@ -52,6 +55,7 @@ Folder and File Naming Conventions
 ====
 We expect you to follow the same folder structure as used in the example files. While there’s a [detailed specification document](https://docs.google.com/document/d/1h0r8RZr_f3-8egBMMh7aqLwy3snpD6_MrDz1q8n5XUk/edit?tab=t.0), here’s a brief summary of the most relevant elements:
 
+Folder structure:
 `MPI-M/MPI-ESM1-2-LR/aimip/r1i1p1f1/Amon/pr/gr/v20190815/`
 
 - `MPI-M`: Institute name
@@ -76,14 +80,11 @@ File name:
 
 More details is available in the [AMIP Specification](https://docs.google.com/document/d/1-NqmXTrEGolzzUdQdMQER43sluNvqeJIiRZeYjE2jKY/edit?tab=t.0#heading=h.agwogvnn8ud).
 
-Preparing Your Data
-====
-
 At a minimum, you must define:
 - Name of the institute e.g. `RTE-RRTMGP-Consortium` (use only dashes, no underscores)
 - Name of the model e.g. `MPI-ESM1-2-LR` (use only dashes, no underscores)
 
-Use these consistently across all your data. If your institute already participates in CMIP, [check this list](https://github.com/WCRP-CMIP/CMIP6_CVs/blob/main/CMIP6_institution_id.json),and use the official name.
+Use these consistently across all your data. If your institute already participates in CMIP, [check this list](https://github.com/WCRP-CMIP/CMIP6_CVs/blob/main/CMIP6_institution_id.json), and use the official name.
 
 We have agreed to use gr (regular 1° grid) as the main source for intercomparison. Please provide your data on this grid first.
 
