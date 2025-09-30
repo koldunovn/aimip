@@ -86,8 +86,6 @@ At a minimum, you must define:
 
 Use these consistently across all your data. If your institute already participates in CMIP, [check this list](https://github.com/WCRP-CMIP/CMIP6_CVs/blob/main/CMIP6_institution_id.json), and use the official name.
 
-We have agreed to use gr (regular 1° grid) as the main source for intercomparison. Please provide your data on this grid first.
-
 When your data are ready, contact Nikolay Koldunov (nikolay.koldunov@awi.de,  use “AIMIP” in the subject line), and we will upload it to the bucket. In the future, we plan to allow direct uploads to institute-specific folders.
 
 TODO
