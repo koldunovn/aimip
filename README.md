@@ -57,7 +57,7 @@ Folder and File Naming Conventions
 We expect you to follow the same folder structure as used in the example files. While there’s a [detailed specification document](https://docs.google.com/document/d/1h0r8RZr_f3-8egBMMh7aqLwy3snpD6_MrDz1q8n5XUk/edit?tab=t.0), here’s a brief summary of the most relevant elements:
 
 Folder structure:
-`MPI-M/MPI-ESM1-2-LR/aimip/r1i1p1f1/Amon/pr/gr/v20190815/`
+`MPI-M/MPI-ESM1-2-LR/aimip/r1i1p1f1/Amon/pr/gn/v20190815/`
 
 - `MPI-M`: Institute name
 - `MPI-ESM1-2-LR`: Model name
@@ -65,18 +65,18 @@ Folder structure:
 - `r1i1p1f1`: Realization (ensemble member)
 - `Amon` Output frequency
 - `pr` Variable name
-- `gr` Grid type
+- `gn` Grid type
 - `v20190815` Data version
 
 File name:
-`pr_Amon_MPI-ESM1-2-LR_amip_r1i1p1f1_gr_197901-199812.nc`
+`pr_Amon_MPI-ESM1-2-LR_amip_r1i1p1f1_gn_197901-199812.nc`
 
 - `pr` Variable
 - `Amon` Frequency
 - `MPI-ESM1-2-LR` Model
 - `amip` Activity (in our case we rename to `aimip`, but I keep `amip` in the example files to avoid confusion)
 - `r1i1p1f1` Realization
-- `gr` Grid type (we use gr for regular 1 degree grid; gn can be used for native grid)
+- `gn` Grid type (gn is used for native grid, gr can be used for regular 1 degree grid; )
 - `197901-199812` Time period
 
 More details is available in the [AMIP Specification](https://docs.google.com/document/d/1-NqmXTrEGolzzUdQdMQER43sluNvqeJIiRZeYjE2jKY/edit?tab=t.0#heading=h.agwogvnn8ud).
