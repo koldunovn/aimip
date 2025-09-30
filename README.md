@@ -1,5 +1,6 @@
 AIMIP data preparation
 ==
+The protocol is described in https://github.com/ai2cm/AIMIP , please refer to this page for latest updates.
 
 The easiest way to start converting your data into CMORized files is to download the example files we’ve prepared and use them as templates for your own data.
 
